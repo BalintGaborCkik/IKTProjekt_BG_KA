@@ -1,0 +1,1 @@
+#Bálint Gábor 10.B és Kaibás Alex 10.B - Python első beadandó
