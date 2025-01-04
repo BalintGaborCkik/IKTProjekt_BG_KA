@@ -18,3 +18,18 @@ possz=0
 for i in range(n):
     nyossz+=t[i]
 print("A pénztárcánkban összesen",possz,"forint van")
+
+print("c) feladat --------------------")
+nydb=0
+vdb=0
+for i in range(n):
+    if t[i] >= 0:
+        nydb+=1
+    else:
+        vdb+=1
+if nydb > vdb:
+    print("Többször nyertünk, mint vesztettünk")
+elif nydb < vdb:
+    print("Többször vesztettünk, mint nyertünk")
+elif nydb == vdb:
+    print("Ugyanannyiszor nyertünk, mint veszítettünk.")
