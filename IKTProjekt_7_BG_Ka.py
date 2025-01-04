@@ -33,3 +33,24 @@ elif nydb < vdb:
     print("Többször vesztettünk, mint nyertünk")
 elif nydb == vdb:
     print("Ugyanannyiszor nyertünk, mint veszítettünk.")
+
+print("d) feladat --------------------")
+maxindex=0
+maxhossz=0
+index=0
+hossz=0
+for i in range(1,n):
+    if t[i]>0:
+        hossz +=1
+        if hossz == 1:
+            index = i+1
+    elif t[i]<0:
+        if maxhossz < hossz:
+            maxindex = index
+            maxhossz = hossz
+        hossz = 0
+        index = 0
+if maxhossz > 0:
+    print("A",maxindex,". és",maxindex+maxhossz-1,". hét között volt",maxhossz,"héten keresztül a leghosszabb nyerő sorozat.")
+else:
+    print("Nincs nyerő sorozat.")
