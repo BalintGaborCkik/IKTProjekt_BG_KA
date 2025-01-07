@@ -12,11 +12,9 @@ for i in range(n):
         maxindex = i+1
 print(maxindex,". héten volt a legnagyobb a nyereségünk")
 print("b) feladat --------------------")
-n=8
-t=[6400, -2000, -4300, 8200, 1000, -3400, 600, -900]
 possz=0
 for i in range(n):
-    nyossz+=t[i]
+    possz+=t[i]
 print("A pénztárcánkban összesen",possz,"forint van")
 
 print("c) feladat --------------------")
@@ -39,8 +37,8 @@ maxindex=0
 maxhossz=0
 index=0
 hossz=0
-for i in range(1,n):
-    if t[i]>0:
+for i in range(n):
+    if t[i]>=0:
         hossz +=1
         if hossz == 1:
             index = i+1
