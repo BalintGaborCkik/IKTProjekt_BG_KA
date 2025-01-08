@@ -43,11 +43,11 @@ for i in range(n):
         if hossz == 1:
             index = i+1
     elif t[i]<0:
-        if maxhossz < hossz:
-            maxindex = index
-            maxhossz = hossz
         hossz = 0
         index = 0
+    if maxhossz < hossz:
+        maxindex = index
+        maxhossz = hossz
 if maxhossz > 0:
     print("A",maxindex,". és",maxindex+maxhossz-1,". hét között volt",maxhossz,"héten keresztül a leghosszabb nyerő sorozat.")
 else:
